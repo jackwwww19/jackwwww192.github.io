@@ -66,7 +66,7 @@
 
     /* Meme text block with a heavier look using text stroke */
     .meme-text {
-      font-size: 3rem;
+      font-size: 2rem;  /* Adjusted font size for better fitting */
       font-weight: bold;
       background: white;
       color: black;
@@ -79,6 +79,8 @@
       text-align: center;
       -webkit-text-stroke: 1px black; /* Add stroke for extra boldness */
       cursor: pointer;
+      word-wrap: break-word;  /* Ensure long words wrap */
+      max-width: 90%;  /* Ensure it doesn't overflow */
     }
 
     /* Footer text styling */
