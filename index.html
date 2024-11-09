@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ultimate Meme Zone</title>
-  <!-- Import Chewy font for exaggerated meme styling -->
-  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka+One&display=swap" rel="stylesheet">
+  <!-- Import Chewy and Luckiest Guy fonts for meme styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka+One&family=Luckiest+Guy&display=swap" rel="stylesheet">
   <style>
     /* Black and white meme style theme */
     body {
@@ -27,9 +27,7 @@
       font-weight: bold;
       letter-spacing: 3px;
       margin: 20px 0;
-      text-shadow: 
-        3px 3px black,   /* First shadow for depth */
-        -3px -3px black; /* Second shadow for extra thickness */
+      text-shadow: 3px 3px black, -3px -3px black;
     }
 
     /* Bold, meme-style paragraph with thicker text shadow */
@@ -39,9 +37,7 @@
       max-width: 800px;
       margin: 20px auto;
       line-height: 1.5;
-      text-shadow: 
-        2px 2px black,    /* First shadow for depth */
-        -2px -2px black;  /* Second shadow for extra thickness */
+      text-shadow: 2px 2px black, -2px -2px black;
     }
 
     /* Meme images in chaotic layout */
@@ -68,9 +64,9 @@
       transform: rotate(calc(-10deg * var(--rotation))) scale(1.2);
     }
 
-    /* Bold meme text block with a heavier look using text stroke */
+    /* Meme text block with a heavier look using text stroke */
     .meme-text {
-      font-size: 2.7rem;
+      font-size: 3rem;
       font-weight: bold;
       background: white;
       color: black;
@@ -82,6 +78,7 @@
       transform: rotate(-5deg);
       text-align: center;
       -webkit-text-stroke: 1px black; /* Add stroke for extra boldness */
+      cursor: pointer;
     }
 
     /* Footer text styling */
@@ -89,9 +86,7 @@
       margin-top: 50px;
       font-size: 1.2rem;
       font-weight: bold;
-      text-shadow: 
-        2px 2px black,   /* First shadow for depth */
-        -2px -2px black; /* Second shadow for extra thickness */
+      text-shadow: 2px 2px black, -2px -2px black;
     }
   </style>
 </head>
@@ -112,10 +107,33 @@
     <!-- Add more images here as needed -->
   </div>
 
-  <!-- Meme text block -->
-  <div class="meme-text">🔥 UNLIMITED MEMES 🔥</div>
+  <!-- Meme text block, modified to say "CA:PUMP" -->
+  <div class="meme-text" id="memeText" onclick="copyText()">🔥 CA:PUMP 🔥</div>
 
   <footer>© 2024 Ultimate Meme Zone | Crafted in chaos, powered by memes!</footer>
+
+  <script>
+    // Function to copy the text to clipboard
+    function copyText() {
+      // Get the text from the element
+      const text = document.getElementById('memeText').innerText;
+
+      // Create a temporary input element
+      const input = document.createElement('input');
+      document.body.appendChild(input);
+      input.setAttribute('value', text);
+
+      // Select the text and copy it to the clipboard
+      input.select();
+      document.execCommand('copy');
+
+      // Remove the temporary input element
+      document.body.removeChild(input);
+
+      // Optionally, alert the user
+      alert('Text copied to clipboard: ' + text);
+    }
+  </script>
 
 </body>
 </html>
