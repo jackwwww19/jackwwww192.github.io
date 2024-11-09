@@ -90,6 +90,18 @@
       font-weight: bold;
       text-shadow: 2px 2px black, -2px -2px black;
     }
+
+    /* New section for $MAGA PEPE token info */
+    .token-info {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 50px;
+      text-transform: uppercase;
+      color: yellow;
+      text-shadow: 3px 3px black;
+      padding: 10px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -112,28 +124,34 @@
   <!-- Meme text block, modified to say "CA:PUMP" -->
   <div class="meme-text" id="memeText" onclick="copyText()">🔥 CA:9HpyvN9BggL9ptjmro6mMu9vyNDSTNvRAPnEdC3Apump 🔥</div>
 
+  <!-- New $MAGA PEPE Token Info Section -->
+  <div class="token-info" id="tokenInfo" onclick="copyTokenInfo()">🔥 $MAGA PEPE TOKEN 🔥</div>
+
   <footer>© 2024 Ultimate Meme Zone | Crafted in chaos, powered by memes!</footer>
 
   <script>
-    // Function to copy the text to clipboard
+    // Function to copy the text from meme text block
     function copyText() {
-      // Get the text from the element
       const text = document.getElementById('memeText').innerText;
-
-      // Create a temporary input element
       const input = document.createElement('input');
       document.body.appendChild(input);
       input.setAttribute('value', text);
-
-      // Select the text and copy it to the clipboard
       input.select();
       document.execCommand('copy');
-
-      // Remove the temporary input element
       document.body.removeChild(input);
-
-      // Optionally, alert the user
       alert('Text copied to clipboard: ' + text);
+    }
+
+    // Function to copy the $MAGA PEPE token info text
+    function copyTokenInfo() {
+      const tokenInfo = document.getElementById('tokenInfo').innerText;
+      const input = document.createElement('input');
+      document.body.appendChild(input);
+      input.setAttribute('value', tokenInfo);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      alert('Token info copied to clipboard: ' + tokenInfo);
     }
   </script>
 
