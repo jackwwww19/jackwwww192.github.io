@@ -21,23 +21,27 @@
       overflow: hidden;
     }
     
-    /* Large, bold meme-style title with black shadow */
+    /* Large, bold meme-style title with double shadow for a heavier look */
     h1 {
       font-size: 4rem;
       font-weight: bold;
       letter-spacing: 3px;
       margin: 20px 0;
-      text-shadow: 4px 4px black;
+      text-shadow: 
+        3px 3px black,   /* First shadow for depth */
+        -3px -3px black; /* Second shadow for extra thickness */
     }
 
-    /* Bold, meme-style paragraph with clearer font size */
+    /* Bold, meme-style paragraph with thicker text shadow */
     p {
       font-size: 1.8rem;
       font-weight: bold;
       max-width: 800px;
       margin: 20px auto;
       line-height: 1.5;
-      text-shadow: 2px 2px black;
+      text-shadow: 
+        2px 2px black,    /* First shadow for depth */
+        -2px -2px black;  /* Second shadow for extra thickness */
     }
 
     /* Meme images in chaotic layout */
@@ -64,7 +68,7 @@
       transform: rotate(calc(-10deg * var(--rotation))) scale(1.2);
     }
 
-    /* Bold meme text block */
+    /* Bold meme text block with a heavier look using text stroke */
     .meme-text {
       font-size: 2.7rem;
       font-weight: bold;
@@ -77,6 +81,7 @@
       box-shadow: 6px 6px black;
       transform: rotate(-5deg);
       text-align: center;
+      -webkit-text-stroke: 1px black; /* Add stroke for extra boldness */
     }
 
     /* Footer text styling */
@@ -84,6 +89,9 @@
       margin-top: 50px;
       font-size: 1.2rem;
       font-weight: bold;
+      text-shadow: 
+        2px 2px black,   /* First shadow for depth */
+        -2px -2px black; /* Second shadow for extra thickness */
     }
   </style>
 </head>
