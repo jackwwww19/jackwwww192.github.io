@@ -6,22 +6,19 @@
   <title>Ultimate Meme Zone</title>
   <!-- Import Silkscreen font for meme styling -->
   <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
-  <!-- Import Font Awesome for social media icons -->
+  <!-- Import Font Awesome for Telegram icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    /* Black and white meme style theme with Pepe green background */
     body {
-      background-color: #1D8429; /* Pepe green background */
+      background-color: #1D8429;
       color: white;
       font-family: 'Silkscreen', sans-serif;
-      display: block;
       text-align: center;
       margin: 0;
       padding: 0;
       height: auto;
     }
 
-    /* Large, bold meme-style title with double shadow for a heavier look */
     h1 {
       font-size: 4rem;
       font-weight: bold;
@@ -30,7 +27,6 @@
       text-shadow: 3px 3px black, -3px -3px black;
     }
 
-    /* Bold, meme-style paragraph with thicker text shadow */
     p {
       font-size: 2rem;
       font-weight: bold;
@@ -40,7 +36,6 @@
       text-shadow: 2px 2px black, -2px -2px black;
     }
 
-    /* Meme images in chaotic layout */
     .meme-images {
       display: flex;
       flex-wrap: wrap;
@@ -50,7 +45,6 @@
       margin-bottom: 30px;
     }
 
-    /* Meme image styling with rotation effect */
     .meme-images img {
       width: 150px;
       height: 150px;
@@ -60,12 +54,10 @@
       transition: transform 0.2s ease-in-out;
     }
 
-    /* Add zoom effect on hover */
     .meme-images img:hover {
       transform: rotate(calc(-10deg * var(--rotation))) scale(1.2);
     }
 
-    /* Meme text block with a heavier look using text stroke */
     .meme-text {
       font-size: 2.5rem;
       font-weight: bold;
@@ -85,7 +77,6 @@
       margin-bottom: 30px;
     }
 
-    /* Footer text styling */
     footer {
       font-size: 1.5rem;
       font-weight: bold;
@@ -94,7 +85,6 @@
       padding-bottom: 20px;
     }
 
-    /* Social icons styling */
     .social-icons {
       margin-top: 20px;
       font-size: 2rem;
@@ -109,6 +99,11 @@
     .social-icons a:hover {
       color: #000;
     }
+
+    .x-icon {
+      width: 30px;
+      height: 30px;
+    }
   </style>
 </head>
 <body>
@@ -116,7 +111,6 @@
   <h1>Join the $MAPE Army!</h1>
   <p>Many men, wish death upon Pepe, They say I’m just a frog, but I’m so much more, In the meme wars, I’m the one they adore. Keep the gats away, because Pepe is here to stay.</p>
 
-  <!-- Meme Images Section -->
   <div class="meme-images">
     <img src="https://placekitten.com/150/150" alt="Meme Image 1" style="--rotation: 1;">
     <img src="https://placekitten.com/151/151" alt="Meme Image 2" style="--rotation: -1;">
@@ -126,13 +120,12 @@
     <img src="https://placekitten.com/155/155" alt="Meme Image 6" style="--rotation: -3;">
   </div>
 
-  <!-- Meme text block, modified to say "CA:PUMP" -->
   <div class="meme-text" id="memeText" onclick="copyText()">🔥 CA:willcomesoonpump 🔥</div>
 
   <!-- Social media icons -->
   <div class="social-icons">
-    <a href="https://X.com" target="_blank" title="Follow us on X (Twitter)">
-      <i class="fab fa-twitter"></i>
+    <a href="https://X.com" target="_blank" title="Follow us on X">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/X_logo_2023.svg" alt="X Logo" class="x-icon">
     </a>
     <a href="https://t.me/MAPEONSOL" target="_blank" title="Join us on Telegram">
       <i class="fab fa-telegram-plane"></i>
@@ -142,7 +135,6 @@
   <footer>© 2024 MAGA Pepe | NEVER SURRENDER!</footer>
 
   <script>
-    // Function to copy the text to clipboard
     function copyText() {
       const text = document.getElementById('memeText').innerText;
       const input = document.createElement('input');
