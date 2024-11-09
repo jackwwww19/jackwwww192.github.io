@@ -7,9 +7,9 @@
   <!-- Import Chewy and Luckiest Guy fonts for meme styling -->
   <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka+One&family=Luckiest+Guy&display=swap" rel="stylesheet">
   <style>
-    /* Black and white meme style theme */
+    /* Meme style theme with Pepe green background */
     body {
-      background-color: black;
+      background-color: #4CAF50;  /* Pepe green */
       color: white;
       font-family: 'Chewy', 'Fredoka One', Impact, sans-serif;
       display: flex;
@@ -18,9 +18,9 @@
       flex-direction: column;
       text-align: center;
       min-height: 100vh;
-      overflow: hidden; /* Remove if needed */
+      overflow: hidden;
     }
-    
+
     /* Large, bold meme-style title with double shadow for a heavier look */
     h1 {
       font-size: 4rem;
@@ -91,6 +91,12 @@
       text-shadow: 2px 2px black, -2px -2px black;
       position: absolute;
       bottom: 10px;  /* Ensure it's positioned at the bottom */
+    }
+
+    /* Simulate a hand-made, meme style border around the body */
+    body {
+      border: 5px dashed white; /* Dash border for meme effect */
+      padding: 20px; /* Space between content and the border */
     }
   </style>
 </head>
