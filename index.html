@@ -6,17 +6,19 @@
   <title>Ultimate Meme Zone</title>
   <!-- Import Silkscreen font for meme styling -->
   <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+  <!-- Import Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     /* Black and white meme style theme with Pepe green background */
     body {
       background-color: #1D8429; /* Pepe green background */
       color: white;
-      font-family: 'Silkscreen', sans-serif; /* Using Silkscreen font */
+      font-family: 'Silkscreen', sans-serif;
       display: block;
       text-align: center;
       margin: 0;
       padding: 0;
-      height: auto; /* Allow content to expand */
+      height: auto;
     }
 
     /* Large, bold meme-style title with double shadow for a heavier look */
@@ -65,7 +67,7 @@
 
     /* Meme text block with a heavier look using text stroke */
     .meme-text {
-      font-size: 2.5rem;  /* Adjusted font size for better fitting */
+      font-size: 2.5rem;
       font-weight: bold;
       background: white;
       color: black;
@@ -76,66 +78,79 @@
       box-shadow: 6px 6px black;
       transform: rotate(-5deg);
       text-align: center;
-      -webkit-text-stroke: 1px black; /* Add stroke for extra boldness */
+      -webkit-text-stroke: 1px black;
       cursor: pointer;
-      word-wrap: break-word;  /* Ensure long words wrap */
-      max-width: 90%;  /* Ensure it doesn't overflow */
+      word-wrap: break-word;
+      max-width: 90%;
       margin-bottom: 30px;
     }
 
     /* Footer text styling */
     footer {
-      margin-top: 50px;
       font-size: 1.5rem;
       font-weight: bold;
       text-shadow: 2px 2px black, -2px -2px black;
-      position: relative;
+      margin-top: 30px;
       padding-bottom: 20px;
-      margin-bottom: 30px; /* Add more space below footer */
+    }
+
+    /* Social icons styling */
+    .social-icons {
+      margin-top: 20px;
+      font-size: 2rem;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #000;
     }
   </style>
 </head>
 <body>
 
-  <h1Join $MAPE Army!</h1>
-  <p>Many men, wish death upon Pepe, They say I’m just a frog, but I’m so much more, In the meme wars, I’m the one they adore, keep the gats away cause pepe here to stay.</p>
+  <h1>Join the $MAPE Army!</h1>
+  <p>Many men, wish death upon Pepe, They say I’m just a frog, but I’m so much more, In the meme wars, I’m the one they adore. Keep the gats away, because Pepe is here to stay.</p>
 
   <!-- Meme Images Section -->
   <div class="meme-images">
-    <!-- Sample meme images, replace these URLs with your own meme images -->
     <img src="https://placekitten.com/150/150" alt="Meme Image 1" style="--rotation: 1;">
     <img src="https://placekitten.com/151/151" alt="Meme Image 2" style="--rotation: -1;">
     <img src="https://placekitten.com/152/152" alt="Meme Image 3" style="--rotation: 2;">
     <img src="https://placekitten.com/153/153" alt="Meme Image 4" style="--rotation: -2;">
     <img src="https://placekitten.com/154/154" alt="Meme Image 5" style="--rotation: 3;">
     <img src="https://placekitten.com/155/155" alt="Meme Image 6" style="--rotation: -3;">
-    <!-- Add more images here as needed -->
   </div>
 
   <!-- Meme text block, modified to say "CA:PUMP" -->
   <div class="meme-text" id="memeText" onclick="copyText()">🔥 CA:willcomesoonpump 🔥</div>
 
-  <footer>© 2024 MAGA Pepe.| NEVER SURRENDER！</footer>
+  <!-- Social media icons -->
+  <div class="social-icons">
+    <a href="https://X.com" target="_blank" title="Follow us on X (Twitter)">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://t.me/MAPEONSOL" target="_blank" title="Join us on Telegram">
+      <i class="fab fa-telegram-plane"></i>
+    </a>
+  </div>
+
+  <footer>© 2024 MAGA Pepe | NEVER SURRENDER!</footer>
 
   <script>
     // Function to copy the text to clipboard
     function copyText() {
-      // Get the text from the element
       const text = document.getElementById('memeText').innerText;
-
-      // Create a temporary input element
       const input = document.createElement('input');
       document.body.appendChild(input);
       input.setAttribute('value', text);
-
-      // Select the text and copy it to the clipboard
       input.select();
       document.execCommand('copy');
-
-      // Remove the temporary input element
       document.body.removeChild(input);
-
-      // Optionally, alert the user
       alert('Text copied to clipboard: ' + text);
     }
   </script>
