@@ -13,16 +13,16 @@
       color: white;
       font-family: 'Silkscreen', sans-serif; /* Using Silkscreen font */
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       flex-direction: column;
       text-align: center;
-      min-height: 100vh;
-      overflow: hidden; /* Remove if needed */
+      min-height: 100vh; /* Ensures body height takes full screen */
+      overflow: hidden;
       margin: 0;
       padding: 0;
     }
-    
+
     /* Large, bold meme-style title with double shadow for a heavier look */
     h1 {
       font-size: 4rem;
@@ -95,6 +95,7 @@
       text-shadow: 2px 2px black, -2px -2px black;
       position: relative;
       padding-bottom: 20px;
+      margin-bottom: 30px; /* Add more space below footer */
     }
   </style>
 </head>
